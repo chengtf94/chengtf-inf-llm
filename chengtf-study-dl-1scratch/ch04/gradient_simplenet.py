@@ -1,7 +1,6 @@
 # coding: utf-8
 import sys, os
 # sys.path.append(os.pardir)  # 为了导入父目录中的文件而进行的设定
-# sys.path.append(os.pardir)  # 为了导入父目录的文件而进行的设定
 print("当前工作目录:", os.getcwd())
 print("sys.path 路径:", sys.path)
 
@@ -34,6 +33,7 @@ x = np.array([0.6, 0.9])
 t = np.array([0, 0, 1])
 
 net = simpleNet()
+# print(net.W)
 
 f = lambda w: net.loss(x, t)
 dW = numerical_gradient(f, net.W)
